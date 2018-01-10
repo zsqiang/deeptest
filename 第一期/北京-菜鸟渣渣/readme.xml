@@ -1,0 +1,13 @@
+
+"description:"{
+     
+   echo "our firet git repository" >> file
+
+   uppstream  git@github.com:youngweiye@deeptest.git (fetch)
+
+   uppstream  git@github.com:yongwey@deeptest.git(pull)
+}
+	
+
+	Template.py
+	README.md
