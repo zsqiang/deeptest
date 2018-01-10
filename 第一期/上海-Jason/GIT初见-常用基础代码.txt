@@ -1,0 +1,33 @@
+目前git是应用最广泛的开源版本控制工具，不论是开发人员还是测试人员，都是很有必要学习的。
+鉴于各位大佬要求简洁，此文只提供git基础代码干货，不提供理论，github基本用法百度有，讲的也很清楚，请自行百度，勿喷。
+1.下载git安装
+	在git官网或者各个软件下载中心均可下载安装。
+2.设置git
+	主要设置两个就基本OK了（有问题再设置）-name、Email。
+	具体设置命令为：
+	git config --global user.name "Jason"
+	git config --global user.email "jason@example.com"
+	这是全局配置，设置了代表以后所有项目默认都是这个用户，存储在~/.gitconfig中；
+	若不加--global选项，则为设置当前项目的用户，存储在.git/config里。
+	配置好后，可以用以下命令确认下：
+	git config --list
+3.常用命令
+	拉取代码：git clone url/ssh
+	同步代码：git pull
+	切换/创建分支：git checkout branch
+	查看本地仓库状态：git status
+	添加文件到暂缓区：git add addCode
+	提交代码到本地仓库：git commit -m "comment"
+	提交到远程：git push
+	这麽一套下来，基本可以应付平时的了，如果需要更进一步，可以多多百度、谷歌，或者请教大神。
+	
+	PS，鉴于这次用的自己的远程fork分库，再补上几个命令：
+	git remote add upstream "远程总库，即叶子的库"
+	可以用下面代码验证是否设置成功：
+	git remote -v
+	如果出现远程总库和自己fork分库的fetch、push，则设置成功。这时，代码同步则用下面代码：
+	git fetch upstream
+	git merge upstream/branch
+	稍作解释下：第一行是从总库同步到分库，第二行是从分库同步到本地。提交代码时，先push到分库，再MR到总库（这就需要总库权限了，目前暂时只有叶子有）。
+	
+	PPS，这种东西需要多操作，多理解，此文的这一套流程只是git其中之一，希望大家多多动手，多多百度，最后才是多多请教，莫做伸手党。

@@ -1,0 +1,29 @@
+任务一：
+初级篇：
+1、PyCharm社区版已经安装成功，并执行了python程序
+2、关于安装JupyterLab ，目前安装并配置好python
+相关网站：http://jupyter.org/install.html 。 
+         https://github.com/ipython/ipyparallel
+         https://jupyter-notebook.readthedocs.io/en/latest/public_server.html
+         https://stackoverflow.com/questions/tagged/jupyter
+3、了解到JupyterLab的大概使用场景
+
+阅读篇：
+1、待续。 
+
+
+
+
+代码篇：
+1、待续	
+
+
+
+
+任务二：
+1、阅读python3简明扼要教程，每天200行以上代码练习并提交到github
+2、自己购买的书籍阅读
+3、苦叶子公众号《快学python3》示例全部联系一遍，两个礼拜
+4、《专业主义》大前研一  
+5、形成自我习惯
+

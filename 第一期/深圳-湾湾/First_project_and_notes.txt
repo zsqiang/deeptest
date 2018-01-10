@@ -1,0 +1,9 @@
+1 下载git-2.15.1.2-64-bit.exe并安装，在命令行输入git验证是否安装成功
+2 进入github页面注册账号
+3 进入https://github.com/small99/deeptest 点击右上角的Fork，然后在自己的主页出现项目deeptest
+	打开命令行，在F盘新建github文件夹，cd进入此文件夹，git clone https://github.com/wanwan18/deeptest下载项目，至出现下载成功提示
+	dir 查看F:\github文件夹
+	cd 进入第一期的文件夹，md 深圳-湾湾文件夹
+	type nul>First_project_and_notes.txt文件
+	
+	
