@@ -1,7 +1,6 @@
 # -*- coding:utf-8 -*-
 __author__ = "阿_gu"
 
-#交互方式下：
 print("您好，这是我的第一个python程序")
 
 a = 10
