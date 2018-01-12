@@ -1,47 +1,73 @@
 #! -*- coding:utf-8 -*-
 
-# author 改为你的
+__author__ = "Mr.汪"
 
-__author__ == "Mr.汪"
-
-import json
-import requests
-import unittest
-
-class weatherApiTest(unittest.TestCase):
+class Calc:
     """
-    测试用例
+    定义calc类
     """
-    def setUp(self):
-        print("start")
-
-    def test_weatherApi(self):
+    def __init__(self, a, b):
         """
-        执行用例是否与期望相同
+        初始化实例的值,方便其他方法调用
         """
-        url = "http://wthrcdn.etouch.cn/weather_mini"
+        self.a = a
+        self.b = b
 
-        params = {
-            "city":"北京"
-        }
+    def add(self):
+        """
+        加法
+        """
+        return self.a + self.b
 
-        result = requests.get(url,params = params)
-        result = json.loads(result.text)
-        cutresult = result["data"]["forecast"][0]["type"]
-        print(cutresult)
-        if (cutresult == "晴"):
-            print("验证通过")
+    def sub(self):
+        """
+        减法
+        """
+        return self.a - self.b
+
+    def mul(self):
+        """
+        乘法
+        """
+        return self.a * self.b
+
+    def div(self):
+        """
+        除法，考虑到除数不能为0的情况做判断
+        """
+        if b != 0:
+            """
+            使用内置round方法保留两位小数
+            """
+            return round(self.a / self.b, 2)
         else:
-            print("验证失败")
+            print("除数不能为0！！！")
 
-    def tearDown(self):
+def result(calc):
+    """
+    实现加减乘除，并打印
+    """
+    sum = calc.add()
 
-        pass
+    sub = calc.sub()
+
+    mul = calc.mul()
+
+    div = calc.div()
+
+    print(sum, sub, mul, div)
+
+
 
 if __name__ == '__main__':
     """
-    主函数入口
+    主函数里调用类方法
     """
-    unittest.main(verbosity=2)
+    a = int(input("请输入第1个数据："))
+    b = int(input("请输入第2个数据："))
+
+
+    calc = Calc(a, b)
+    result(calc)
 
 
