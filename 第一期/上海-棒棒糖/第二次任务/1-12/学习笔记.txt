@@ -1,0 +1,20 @@
+
+1月9日
+小白GitHub入门教程 2018/1/9
+http://note.youdao.com/noteshare?id=c27d7404b51f9dfd1594a67530509e34&sub=DE402C1F50B141C2A82F053905DABAC3
+命令行参数——sys.argv[]的用法简明解释
+http://note.youdao.com/noteshare?id=13677fb9824d572d879b7dceb2f939b9&sub=FFA7632FC9954D60888B8DB7FA809326
+
+1月10日
+取随机数和判断字符串是否是数字
+http://note.youdao.com/noteshare?id=c18d16e5ed3f4c517bd1fe180faeb71a&sub=F52CF756521F4C2B9025657987479493
+
+1月11日
+tuple list dict的遍历
+http://note.youdao.com/noteshare?id=de6b45b8b1887bfb1ae0f72ad7abdbd9&sub=41CE7B412C914A29A1C7BB001B5F2586
+tuple list dict增删改查小结
+http://note.youdao.com/noteshare?id=aeba32bd0ea437355d5d1aea9f5b4617&sub=FC6B9567AC34494F9BB827685DDEC153
+
+1月12日
+私有属性调用方法
+http://note.youdao.com/noteshare?id=c97641fac4541404b82fcc0947f9f3d5&sub=B08472A9669E44629CFD0AE3CC08EF0D
