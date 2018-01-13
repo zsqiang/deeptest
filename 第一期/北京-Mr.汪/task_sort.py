@@ -24,23 +24,23 @@ class Sort:
     """
     定义排序sort类
     """
-    # def __init__(self,start,end,count):
-    #     """
-    #     这里初始化三个参数分别是随机数开始结束的范围，以及随机数的个数
-    #     :param start:
-    #     :param end:
-    #     :param count:
-    #     """
-    #     self.start = start
-    #     self.end = end
-    #     self.count = count
+    def __init__(self,start,end,count):
+        """
+        这里初始化三个参数分别是随机数开始结束的范围，以及随机数的个数
+        :param start:
+        :param end:
+        :param count:
+        """
+        self.start = start
+        self.end = end
+        self.count = count
 
-    def sort_data(start,end,count):
+    def sort_data(self):
         """
         实现排序，这里利用冒泡排序，还是现学的
         :return:
         """
-        list_random = random.sample(range(start,end),count)
+        list_random = random.sample(range(self.start,self.end),self.count)
         length_random = len(list_random)
         for i in range(0, length_random - 1):
             for j in range(0, length_random - 1 - i):
@@ -50,16 +50,13 @@ class Sort:
         result_random = list_random
         return print(result_random)
 
-# def result(sort):
-#     result_sort = Sort.sort_data()
-#     print(result_sort)
 
 if __name__ == '__main__':
     """
-    主函数入口
+    主函数入口,调用排序方法
     """
-    start = int(input("请输入区间开始范围:"))
-    end = int(input("请输入区间结束范围:"))
-    count = int(input("请输入随机个数:"))
-    Sort.sort_data(start,end,count)
-    # result(sort)
+    # start = int(input("请输入区间开始范围:"))
+    # end = int(input("请输入区间结束范围:"))
+    # count = int(input("请输入随机个数:"))
+    result = Sort(10,100,10)
+    result.sort_data()
