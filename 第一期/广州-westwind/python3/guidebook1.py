@@ -20,6 +20,10 @@ def guidebook():
     c = 1000
     print(int(b), float(c))
     print(type(b), type(c))
+    g = 2e10
+    f = 1.3e2
+    print(g)
+    print(f)
 
 if __name__ == "__main__":
     guidebook()
