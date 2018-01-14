@@ -126,3 +126,68 @@ if __name__ == '__main__':
 
     list_six[5] = "test list for update"
     print(list_six)
+
+    #字典相关练习
+    dict_one = {"key1":"one","key2":"two","key3":"three","key4":"four"}
+    dict_two = {"keyone": "value1", "keytwo": "value2", "keythree": "value3", "keyfour": "value4"}
+    #几个常用函数
+    print(len(dict_one))
+    strone = str(dict_one)
+    print(strone)
+    print(dict_one)
+    print(type(strone))
+    print(type(dict_one))
+    #字典的拷贝
+    dict_cp = dict_two.copy()
+    print(dict_cp)
+    #判断key是否在里面
+    key = u"keyone"
+    resultone = key in dict_one
+    resulttwo = key in dict_two
+    print(resultone)
+    print(resulttwo)
+    #通过get的方式获取到key,如果key在dict里面则返回对应的value值，否则返回值为所默认的值，不添加就是为空
+    result1 = dict_one.get("key4","valuedefault")
+    result2 = dict_one.get("keyone","valuedefault")
+    print(result1)
+    print(result2)
+    #通过fromkeys方式来创建字典,将key的字符串依次进行分割，每个key对应到一个value
+    #例如{'2': 'testvalue', '3': 'testvalue', '4': 'testvalue'}
+    dict_new = dict.fromkeys("234","testvalue")
+    print(dict_new)
+
+    #获取到字典中所有的key
+    keys = dict_two.keys()
+    print(keys)
+    #获取到字典中的所有value
+    values = dict_one.values()
+    print(values)
+    #获取到dict中的
+    items = dict_two.items()
+    print(items)
+
+    #setdefault 往字典中插入相关值，如果对应的key存在则返回对应的value值
+    #如果对应的key不存在，则将当前的值插入字典中，并返回默认值
+    result3 = dict_two.setdefault("keyone","defaultValue")
+    result4 = dict_two.setdefault("keytest","defaultvalue")
+    print(result3)
+    print(result4)
+    print(dict_two)
+    #更新字典中内容，将2个字典合并为一个字典
+    dict_one.update(dict_new)
+    print(dict_one)
+    #遍历字典内容
+    for (key,value) in dict_one.items():
+        print("key=%s,value =%s"%(key,value))
+    for key in  dict_two.keys():
+        print("%s,%s"%(key,dict_two[key]))
+
+    #修改 删除 清空
+    dict_one["key1"] = 'testone'
+    print(dict_one)
+
+    del dict_one["key4"]
+    print(dict_one)
+
+    dict_one.clear()
+    print(dict_one)
