@@ -10,12 +10,11 @@ if __name__ == "__main__":
 
     print("解析本地data_demo.xml文档")
     # 加载xml文档
-    #text_xml = open("data_demo.xml").read()
-    tree = ET.fromstring("country")
+    text_xml = open("data_demo.xml").read()
+    root = ET.fromstring(text_xml)
 
     # 获取根节点，并打印节点文本：data
-    root = tree.getroot()
-    print(root.tag)
+    #print(root.tag)
 
     # 遍历输出country及其name属性
     for child in root:
@@ -77,4 +76,4 @@ if __name__ == "__main__":
             country.remove(year)
         
     # 保存上述修改、新增、删除后的xml到data_demo_new.xml中
-    tree.write("data_demo_new2.xml", encoding="utf-8")
+    text_xml.write("data_demo_new2.xml", encoding="utf-8")
