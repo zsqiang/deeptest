@@ -1,0 +1,25 @@
+1、先将大湿的仓库fork到自己的远程仓库A
+
+
+2、clone刚刚的项目至本地
+
+
+3、把自己的文件放到第一期文件下
+
+
+4、git bash进入第一期目录下
+
+
+5、remote 自己的远程仓库A
+
+
+6、git add . 
+
+
+7、git commit -m ""
+
+
+8、git push origin master
+
+
+9、github申请pull request

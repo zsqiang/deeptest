@@ -9,9 +9,12 @@ set()：python内置函数
 
 if __name__ == '__main__':
 
-    #创建集合
+    #创建集合,可变集合
     sets = set('deeptest')
     print('生成新集合：', sets)
+
+    #通过内建函数len获取集合的长度
+    print('集合长度：', len(sets))
 
     #增加元素
     sets.add(3)
@@ -51,3 +54,4 @@ if __name__ == '__main__':
 
     # 两个集合的交集，包含两个集合的相同元素
     print('交集：', sets_olds.intersection(sets_news))
+
