@@ -1,0 +1,30 @@
+初次使用git总结
+1、git clone 项目到本地的时候可以采用url也可以用ssh
+分别是什么需要在你fork的主页上看
+
+2、clone 命令完成后git会自动将远程主机命名为origin。如果要使用其他的主机名，需要用git clone -o jQuery https://github.com/fork19/deeptest.git
+-o参数可以指定远程主机名
+
+git fetch add upstream https://github.com/small99/deeptest.com
+增加源项目的远程主机
+
+最后用git remote -v 显示可以展示当前remote的所有主机
+
+3、当主干有更新的时候，想要本地和主干同步，那么首先需要执行git fetch 
+
+upstream 命令，检查出upstream分支及各自的更新
+
+切换到本地分支主干 git checkout master
+
+相似命令 git branch dev 创建了一个dev的分支
+
+将在dev分支上提交的内容合并到master分支上
+
+git merge dev
+
+看到fast-forward之后就代表合并成功了
+
+合并完成后要把分支删掉
+
+git branch -d dev
+创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉，和直接在master分支上工作效果是一样的，但过程更安全。

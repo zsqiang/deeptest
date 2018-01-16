@@ -1,0 +1,28 @@
+Github fork其他项目的分支与主干保持同步
+Fork一个Repo
+Fork是一个复制的操作，当你Fork一个项目之后，你就有了在原项目的基础之上进行修改和扩展的权限。
+通常情况下，Fork操作用于参与别人的项目（成为项目中的一员），或者以别人的项目为基础来开发自己的项目。
+当你使用一个开源项目的时候，如果项目中存在bug，除了可以将bug报告项目开发人员。你也可以通过Fork原项目，并参与进来。
+首先，Fork原项目，并将项目代码更新到你的本地；
+其次，修复项目中的bug，并确认问题已修复；
+最后，如果一切测试都没有问题，你就可以提交一个pull request给项目所有人,如果项目所有者认可你的代码，他就会将你的修改更新到原项目中；
+在Github中，Fork一个开源项目主要有两步：
+查找到你想要Fork的项目；
+点击项目介绍页面右上角的Fork；
+保持同步
+当你Fork一个项目之后，你的项目与原项目之间就不存在联系了，当原项目有更新的时候，你自己Fork的项目也不会同步保持更新。为了保持与原项目的一致，你需要使用到Git的命令行。
+第一步 安装git客户端
+如果你没有安装git的客户端，你需要先去下载git的客户端并安装，windows系统git下载安装地址：http://git-scm.com/download/
+第二步 clone你fork的项目
+fork一个项目， 官方示例：https://github.com/octocat/Spoon-Knife；
+使用git命令行clone项目：git clone git@github:[yourname]/Spoon-knife
+第三步 添加新的远程仓库地址
+当你clone完一个项目，可以使用git remote -v来查看你fork的远程仓库的地址；默认的clone操作完成后，远端仓库的地址别名为：origin，为了需要与原项目保持更新，你还需要将原项目地址给添加进来，使用命令:git remote add upstream git@github.com:octocat/Spoon-Knife.git可以添加远端仓库地址,其中upstream为新的远端仓库的别名。
+第四步 同步更新
+假设你已经完成了前三步，当原项目有更新的时候，怎么将更新检入到本地呐，主要是以下几个步骤:
+打开git命令行工具；
+进入项目本地路径；
+执行git fetch upstream命令，检出upstream分支以及各自的更新；
+切换到你的本地分支主干：git checkout master；
+合并upsteram/master分支和master分支,将原项目中的更改更新到本地分支，这样就能使你的本地的fork分支与原项目保持同步，命令:git merge upstream/master；
+执行git push将本地分支的修改推送到远端fork的项目；
