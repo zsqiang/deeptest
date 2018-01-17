@@ -8,4 +8,4 @@ git add .
 git commit -m "aaa"
 
 
-git pull
+git push
