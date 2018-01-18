@@ -1,0 +1,11 @@
+
+1月9日
+小白GitHub入门教程 2018/1/9
+http://www.jianshu.com/p/9bddbd4fb85d
+
+命令行参数——sys.argv[]的用法简明解释
+http://www.jianshu.com/p/3701523eeae5
+
+1月10日
+取随机数和判断字符串是否是数字
+http://www.jianshu.com/p/4f46ce699d5d
