@@ -16,6 +16,11 @@ if __name__ == "__main__":
     print("列表中的最小值是: %d" % min(list_demo))
 
     # 将list转换成元组
-    list1 = tuple(list_demo)
+    tuple1 = tuple(list_demo)
     print("将列表转换成元组:")
+    print(tuple1)
+
+    # 将元组转换成列表
+    list1 = list(tuple1)
+    print("将元组转换成列表:")
     print(list1)
