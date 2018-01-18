@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+#适合数据量相对较小的排序需求场景。其时间复杂度为：O（n^2），是一种稳定的排序方法。
+
+
 import random
 # 随机生成1-1000之间无序序列整数数据
 def generator():
@@ -22,6 +25,8 @@ def insert_sort(data_list):
                 data_list[j+1] = data_list[j]
                 data_list[j] = key
                 #相当与引入了data_list[j+1]这个新的变量做过渡
+            else:
+                break
             j = j-1
     return data_list
 
@@ -29,6 +34,6 @@ def insert_sort(data_list):
 if __name__ == "__main__":
     random_data = generator()
     print(random_data)
-    
+
     new_list = insert_sort(random_data)
     print(new_list)
