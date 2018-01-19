@@ -25,7 +25,7 @@ class Mysort:
         #用冒泡对列表数据进行排序,得出每次较大的数来实现排序
         while n>=1:
             for i in range(n-1):
-                if self.random_data[i]>self.random_data[i+1]:
+                if self.random_data[i]<self.random_data[i+1]:
                     self.random_data[i],self.random_data[i+1]=self.random_data[i+1],self.random_data[i]
             n=n-1
         return self.random_data
@@ -37,7 +37,7 @@ if __name__=="__main__":
     #排序
     data=sorted_data.sort()
 
-    #打印排序后的结果
+    #打印排序后的结果,逐个打印出来
     for e in data:
         print(e)
 
