@@ -10,14 +10,6 @@ class Prime:
     def __init__(self, x):
         self.x = x
 
-    def isprine(self):
-        flag = 0
-        for i in range(2, self.x):
-            for j in range(2, int(math.sqrt(self.x)-1)):
-                if i % j == 0 and i % 2 != 0 and i % 5 != 0:
-                    flag = 1
-        return flag
-
     def prime(self):
 
         if not isinstance(self.x, int) or self.x <= 0:
