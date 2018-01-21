@@ -11,8 +11,11 @@ __time__ = '18/1/19 23:20'
 包括但不限于：书名、作者、定价、摘要等等，
 并将这些信息格式化到excel文档中
 
-豆瓣API快速入门
+豆瓣网API网址：
 https://developers.douban.com/wiki/?title=guide
+https://developers.douban.com/wiki/?title=api_v2
+
+https://github.com/douban/douban-client
 
 纯单IP:  150/3600 = 0.041666 = 0.041 次/s   24s/次
 """

@@ -8,6 +8,9 @@ HTTP处理 - urllib模块
 
 豆瓣网API网址：
 https://developers.douban.com/wiki/?title=guide
+https://developers.douban.com/wiki/?title=api_v2
+
+https://github.com/douban/douban-client
 
 不需要授权公开api可以使用http，参数里面如果不包含apikey的话，限制单ip每小时150次，带的话每小时500次。带apikey的例子为: http://api.douban.com/v2/user/1000001?apikey=XXX, XXX为你的apikey(非公开)
 
