@@ -1,0 +1,52 @@
+#总结：
+
+1、map(func, *Iterable)
+该函数接收两个参数，一个是自定义的函数名，加想要操作的可迭代的list/dirc/tuple这样的Iterable,作用是将这个自定义的函数作用到序列的每个元素中，并把结果作为新的Iterator返回
+def f(x):
+    return x * x
+
+print(list(map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])))
+###说明：map()这个函数返回的是一个Iterator，不能直接展示结果，所以要通过list()函数返回计算结果  
+
+2、reduce(func, sequence)
+###该函数也是接收两个参数，一个是自定义的函数名，另一个是序列，reduce把结果和序列的下一个元素做累积计算，例如：
+>>>from functools import reduce
+
+def fn(x, y):
+    return x * 10 + y
+print(reduce(fn, [1, 3, 5, 7, 9]))
+
+该函数的计算过程如下：
+1 * 10 + 3 = 13
+13 * 10 + 5 = 135
+135 * 10 + 7 = 1357
+1357 * 10 + 0 = 13579
+
+3、filter(function_or_None, Iterable)
+该函数用于过滤序列，和map类似，但不同的是，filter()把传入的函数依次作用于每个元素，根本返回值是True还是False决定保留还是丢弃该元素。
+def is_odd(n):
+    return n % 2 == 1
+
+print(list(filter(is_odd, [1, 2, 4, 5, 6, 9, 15])))
+#执行结果[1, 5, 9, 15]
+说明：filter()函数返回的仍然是一个Iterator,所以要完成计算结果还得使用list()来返回。
+
+4、sored()
+#按照数字大小排列
+a = (sorted([36, 5, -12, 9, -21]))
+
+#按照序列的绝对值大小排列
+b = sorted([36, 5, -12, 9, -21])
+
+#忽略字符串的首字母大小写排列
+c = sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower)
+
+#忽略字符串的首字线大小写逆向排列
+d = sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True)
+
+
+
+
+
+
+
