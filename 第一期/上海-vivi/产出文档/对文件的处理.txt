@@ -1,0 +1,17 @@
+###对文件的处理：
+
+1、打开文件：
+f = open('/Users/michael/test.txt', 'r')
+
+2、读取文件：
+f.read()     #读取小文件
+f.readline()    #每次只读取一行内容
+f.readlines()     #读取配置文件
+
+3、关闭文件：(文件使用完毕后必须关闭，会占用操作系统资源)
+f.close()
+
+为了保证无论是否出错都能正确的关闭文件，我们利用一种简洁的方式with来自动帮我们调用close()
+with open('/path/to/file', 'r') as f:
+	print(f.read())
+	
