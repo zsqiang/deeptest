@@ -8,9 +8,17 @@ def summ(seq):
         sum=sum+i
     return sum
 
-def mult():
-    for i in range(1,j+1):
-        for x in range(1,j+1):
-            print("%s * %s=%d"%(i,j,i*j) )
-sum_1=summ([1,2,3,4,5])
-print(sum_1)
+#给一个数,算其乘法表 如九九乘法表
+#   x为要算哪个数字的乘法表
+def mult(x):
+    for i in range(1,x+1):
+        for j in range(1,i+1):
+            print("%s * %s=%d"%(j,i,i*j) )
+
+if __name__=="__main__":
+    #求和
+    sum_1=summ([1,2,3,4,5])
+    print(sum_1)
+
+    #打印九九乘法表
+    mult(9)

@@ -22,6 +22,8 @@ if __name__=="__main__":
     ##append(obj) 在list末尾增加 一个 元素对象
     list_3=list_1.append(33)
     print(list_1)
+    ##inset(index,obj),插入元素在指定位置
+    list_1.insert(1,"kk")
     ##pop([i])默认删除最后一个元素并返回该元素,可指定i
     list_4=list_1.pop(-2)
     print(list_4)
