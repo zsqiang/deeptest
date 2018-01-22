@@ -1,0 +1,44 @@
+#模块
+1.operator
+
+__all__ = ['abs', 'add', 'and_', 'attrgetter', 'concat', 'contains', 'countOf',
+           'delitem', 'eq', 'floordiv', 'ge', 'getitem', 'gt', 'iadd', 'iand',
+           'iconcat', 'ifloordiv', 'ilshift', 'imatmul', 'imod', 'imul',
+           'index', 'indexOf', 'inv', 'invert', 'ior', 'ipow', 'irshift',
+           'is_', 'is_not', 'isub', 'itemgetter', 'itruediv', 'ixor', 'le',
+           'length_hint', 'lshift', 'lt', 'matmul', 'methodcaller', 'mod',
+           'mul', 'ne', 'neg', 'not_', 'or_', 'pos', 'pow', 'rshift',
+           'setitem', 'sub', 'truediv', 'truth', 'xor']
+###逻辑操作：
+  not_(a)   : False
+  truth(a)  : True
+  is_(a, b)  : True
+  is_not(a, b): False
+ 
+###比较操作符（等价于<、<=、==、>=和>）
+  lt(a, b): True
+  le(a, b): True
+  eq(a, b): False
+  ne(a, b): True
+  ge(a, b): False
+  gt(a, b): False
+ 
+###算术操作符：
+  abs返回值得绝对值，neg返回(-obj), pos返回(+obj)
+  
+  加减乘除：add, sub, mul, truediv(+, -, *, /)
+ 
+###原地操作符
+  即in-place操作， x += y 等同于 x = iadd(x, y), 如果复制给其他变量比如z = iadd(x, y)等同与z = x; z += y。
+ 
+###关于item的操作
+  getitem(a,b) -->get a[b]       获取a中索引为b的值
+  setitem(a,b,c) -->set a[b]=c   设置a中索引为b的项目值更改为c
+  delitem(a, b) -->del a[b]      删除a中索引为b值
+  itemgetter(item/*items)   返回一个可调用的对象，该对象通过运算符__getitems__()的方法从运算中获取item,如果指定多个item，返回查找值的无组
+  eg:
+  
+  
+
+ 
+ 
