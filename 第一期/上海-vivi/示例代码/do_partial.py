@@ -1,0 +1,1 @@
+# -.- coding:utf-8 -.-# __author__= 'vivi'import functoolsint2 = functools.partial(int, base=2)int3 = functools.partial(int, base=10)print('1000000=', int2('1000000'))print('1010101=', int2('1010101'))print('1000000=', int3('1000000'))print('1010101=', int3('1010101'))

@@ -1,0 +1,76 @@
+python3中的异常包括错误和异常：
+
+###错误处理
+try:
+	a
+except *Error as e:
+	b
+else:
+	c
+finally:
+	d
+print('END')
+
+场景：
+1.a有错时 ,执行b + d  
+2. a没有错时，执行c + d
+
+###抛出错误
+
+raise: 程序主动抛出错误，让调用者来处理相应的错误。但要写清楚会抛出哪些错误以及错误产生的原因。如选择自己定义的错误class,需要选择好继承关系，继承自哪个内置异常的条件下
+如：
+class FooError(ValueError):
+
+###断言
+凡是用print()来辅助查看的地方，都可以用assert来替代，如果断言失败，则会抛出AssertionError
+也可以用logging来替代，logging 不会抛出错误，但可以输出到文件，如需要输出错误的详细信息，则需要在import logging后添加一行配置如：
+
+import logging
+logging.basicConfig(level = logging.INFO) #这里INFO也可以为debug, info,warning,error，当指定其中一个时其它的便不起作用
+
+ 
+ 
+ 
+1、错误
+
+在代码运行前的语法或逻辑错误
+
+SystaxError（语法错误）
+
+ValueError（逻辑错误）
+
+
+
+2.异常
+
+
+常见异常种类
+
+AttributeError 试图访问一个对象没有的属性，比如foo.x，但是foo没有属性x
+
+IOError 输入/输出异常；基本上是无法打开文件
+
+ImportError 无法引入模块或包；基本上是路径问题或名称错误
+
+IndentationError 语法错误（的子类） ；代码没有正确对齐
+
+IndexError 下标索引超出序列边界，比如当x只有三个元素，却试图访问x[5]
+
+KeyError 试图访问字典里不存在的键
+
+KeyboardInterrupt Ctrl+C被按下
+
+NameError 尝试访问一个没有申明的变量
+
+SyntaxError Python代码非法，代码不能编译(个人认为这是语法错误，写错了）
+
+TypeError 传入对象类型与要求的不符合
+
+UnboundLocalError 试图访问一个还未被设置的局部变量，基本上是由于另有一个同名的全局变量，导致你以为正在访问它
+
+ValueError 传入一个调用者不期望的值，即使值的类型是正确的
+
+ZeroDivisionError  在除法或者模除操作的第二个参数为0时引发
+
+3、如果在编码时不知道会抛哪个异常，可以使用万能异常:
+Exception
