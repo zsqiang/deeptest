@@ -1,5 +1,5 @@
 # _*_ coding : utf-8 _*_
-__author__ = "Jason"
+__author__ = "Jason_copy"
 
 '''
 遍历某个文件夹下面的所有子文件夹和文件名称
