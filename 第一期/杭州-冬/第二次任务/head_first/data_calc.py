@@ -38,3 +38,17 @@ def movies_print(a_list):
             print(a_item)
 
 movies_print(movies_xiyouji)
+
+#现在还要求每发现一个嵌套列表就缩进一个
+
+##增加一个参数in_table,控制是否缩进及缩进多少
+def movies_printin(a_list,in_table=0):
+    for a_item in a_list:
+        if isinstance(a_item,list):
+            movies_printin(a_item,in_table+1)
+        else:
+            for i in range(in_table):
+                print("\t",end='')
+            print(a_item)
+
+movies_printin(movies_xiyouji)
