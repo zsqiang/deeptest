@@ -39,16 +39,15 @@ class Arithmetic:
             print('请输入正确的数字！')
 
 
-
-if __name__=='__main__':
+if __name__ == '__main__':
 
     print("请输入两个数字：")
-    a,b=map(int,input().strip().split(' '))
-    print(a,b)
-    art = Arithmetic(a,b)
+    a, b = map(int, input().strip().split(' '))
+    print(a, b)
+    art = Arithmetic(a, b)
     print("请输入您要执行的运算法则：+、-、*、/")
-    choice=input()
-    if choice=='+':
+    choice = input()
+    if choice == '+':
         print(a,'+',b,'=',art.__add__())
     elif choice=='-':
         print(a,'-',b,'=',art.__sub__())
