@@ -39,7 +39,7 @@ if __name__=="__main__":
     list_num=[33,77,11,55]
     list_num.sort()
     print(list_num)
-    #扩展：可在list末尾加一个序列
+    #扩展：可在list末尾加一个序列，新列表包含了追加序列的元素
     list_num.extend(tuple_1)
     print(list_num)
 
