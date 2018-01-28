@@ -21,20 +21,20 @@ class Fib(object):
 
 for n in Fib():
     print(n)
-	
-	
-	
+
+
+
 #实现方法二：
 __getitem__()
 
 class Fib2(object):
-	
+
 	def __getitem__(self, n):
 		a, b = 1, 1
 		for x in range(n):
 			a, b = b, a + b
 		return a
-		
+
 f = Fib2()
 print(f[0])
 print(f[9])
