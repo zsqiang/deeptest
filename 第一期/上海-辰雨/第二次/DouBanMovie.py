@@ -10,13 +10,10 @@ import xlwt
 
 #得到页面全部内容
 def askURL(url):
-	#发送请求
-    request = urllib2.Request(url)
+    request = urllib2.Request(url)#发送请求
     try:
-		#取得响应
-        response = urllib2.urlopen(request)
-		#获取网页内容
-        html= response.read()
+        response = urllib2.urlopen(request)#取得响应
+        html= response.read()#获取网页内容
         #print html
     except urllib2.URLError, e:
         if hasattr(e,"code"):
@@ -27,12 +24,9 @@ def askURL(url):
 
 #获取相关内容
 def getData(baseurl):
-	#找到影片详情链接
-    findLink=re.compile(r'<a href="(.*?)">')
-	#找到影片图片
-    findImgSrc=re.compile(r'<img.*src="(.*jpg)"',re.S)
-	#找到片名
-    findTitle=re.compile(r'<span class="title">(.*)</span>')
+    findLink=re.compile(r'<a href="(.*?)">')#找到影片详情链接
+    findImgSrc=re.compile(r'<img.*src="(.*jpg)"',re.S)#找到影片图片
+    findTitle=re.compile(r'<span class="title">(.*)</span>')#找到片名
     #找到评分
     findRating=re.compile(r'<span class="rating_num" property="v:average">(.*)</span>')
     #找到评价人数
@@ -45,46 +39,33 @@ def getData(baseurl):
         url=baseurl+str(i*25)
         html=askURL(url)
         soup = BeautifulSoup(html,'html.parser')
-		#找到每一个影片项
-        for item in soup.find_all('div',class_='item'):
+        for item in soup.find_all('div',class_='item'):#找到每一个影片项
             data=[]
-			#转换成字符串
-            item=str(item)
+            item=str(item)#转换成字符串
             #print item
             link=re.findall(findLink,item)[0]
-			#添加详情链接
-            data.append(link)
+            data.append(link)#添加详情链接
             imgSrc=re.findall(findImgSrc,item)[0]
-			#添加图片链接
-            data.append(imgSrc)
+            data.append(imgSrc)#添加图片链接
             titles=re.findall(findTitle,item)
             #片名可能只有一个中文名，没有外国名
             if(len(titles)==2):
                 ctitle=titles[0]
-				#添加中文片名
-                data.append(ctitle)
-				#去掉无关符号
-                otitle=titles[1].replace(" / ","")
-				#添加外国片名
-                data.append(otitle)
+                data.append(ctitle)#添加中文片名
+                otitle=titles[1].replace(" / ","")#去掉无关符号
+                data.append(otitle)#添加外国片名
             else:
-				#添加中文片名
-                data.append(titles[0])
-				#留空
-                data.append(' ')
+                data.append(titles[0])#添加中文片名
+                data.append(' ')#留空
             rating=re.findall(findRating,item)[0]
-			#添加评分
-            data.append(rating)
+            data.append(rating)#添加评分
             judgeNum=re.findall(findJudge,item)[0]
-			#添加评论人数
-            data.append(judgeNum)
+            data.append(judgeNum)#添加评论人数
             inq=re.findall(findInq,item)
             #可能没有概况
             if len(inq)!=0:
-				#去掉句号
-                inq=inq[0].replace("。","")
-				#添加概况
-                data.append(inq)
+                inq=inq[0].replace("。","")#去掉句号
+                data.append(inq)#添加概况
             else:
                 data.append(' ')#留空
             if(len(data)!=12):
