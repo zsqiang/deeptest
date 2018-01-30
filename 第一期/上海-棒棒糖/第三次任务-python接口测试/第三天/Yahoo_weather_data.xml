@@ -1,0 +1,19 @@
+<query xmlns:ns0="http://www.yahooapis.com/v1/base.rng" xmlns:ns1="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:ns2="http://www.w3.org/2003/01/geo/wgs84_pos#" ns0:count="1" ns0:created="2018-01-30T14:13:33Z" ns0:lang="en-US"><results><channel><ns1:units distance="mi" pressure="in" speed="mph" temperature="F" /><title>Yahoo! Weather - Beijing, Beijing, CN</title><link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2151330/</link><description>Yahoo! Weather for Beijing, Beijing, CN</description><language>en-us</language><lastBuildDate>Tue, 30 Jan 2018 10:13 PM CST</lastBuildDate><ttl>60</ttl><ns1:location city="Beijing" country="China" region=" Beijing" /><ns1:wind chill="25" direction="325" speed="11" /><ns1:atmosphere humidity="23" pressure="1023.0" rising="0" visibility="16.1" /><ns1:astronomy sunrise="7:24 am" sunset="5:32 pm" /><image><title>Yahoo! Weather</title><width>142</width><height>18</height><link>http://weather.yahoo.com</link><url updated="yes">°ô°ôÌÇÅöÒ»¸ö</url></image><item><title>Conditions for Beijing, Beijing, CN at 09:00 PM CST</title><ns2:lat>39.90601</ns2:lat><ns2:long>116.387909</ns2:long><link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2151330/</link><pubDate>Tue, 30 Jan 2018 09:00 PM CST</pubDate><ns1:condition code="31" date="Tue, 30 Jan 2018 09:00 PM CST" temp="31" text="Clear" /><ns1:forecast code="32" date="30 Jan 2018" day="Tue" high="40" low="19" text="Sunny" /><ns1:forecast code="32" date="31 Jan 2018" day="Wed" high="36" low="20" text="Sunny" /><ns1:forecast code="32" date="01 Feb 2018" day="Thu" high="40" low="16" text="Sunny" /><ns1:forecast code="32" date="02 Feb 2018" day="Fri" high="28" low="17" text="Sunny" /><ns1:forecast code="32" date="03 Feb 2018" day="Sat" high="31" low="12" text="Sunny" /><ns1:forecast code="32" date="04 Feb 2018" day="Sun" high="34" low="13" text="Sunny" /><ns1:forecast code="32" date="05 Feb 2018" day="Mon" high="37" low="19" text="Sunny" /><ns1:forecast code="34" date="06 Feb 2018" day="Tue" high="40" low="20" text="Mostly Sunny" /><ns1:forecast code="34" date="07 Feb 2018" day="Wed" high="38" low="24" text="Mostly Sunny" /><ns1:forecast code="34" date="08 Feb 2018" day="Thu" high="38" low="20" text="Mostly Sunny" /><description>&lt;![CDATA[&lt;img src="http://l.yimg.com/a/i/us/we/52/31.gif"/&gt;
+&lt;BR /&gt;
+&lt;b&gt;Current Conditions:&lt;/b&gt;
+&lt;BR /&gt;Clear
+&lt;BR /&gt;
+&lt;BR /&gt;
+&lt;b&gt;Forecast:&lt;/b&gt;
+&lt;BR /&gt; Tue - Sunny. High: 40Low: 19
+&lt;BR /&gt; Wed - Sunny. High: 36Low: 20
+&lt;BR /&gt; Thu - Sunny. High: 40Low: 16
+&lt;BR /&gt; Fri - Sunny. High: 28Low: 17
+&lt;BR /&gt; Sat - Sunny. High: 31Low: 12
+&lt;BR /&gt;
+&lt;BR /&gt;
+&lt;a href="http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2151330/"&gt;Full Forecast at Yahoo! Weather&lt;/a&gt;
+&lt;BR /&gt;
+&lt;BR /&gt;
+&lt;BR /&gt;
+]]&gt;</description><guid isPermaLink="false" /></item></channel></results></query>
