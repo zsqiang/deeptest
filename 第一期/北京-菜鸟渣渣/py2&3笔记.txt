@@ -1,0 +1,32 @@
+E:\Program\android\Java\jdk1.7.0_67
+
+
+当python脚本需要python2运行时，只需在脚本前加上，然后运行py xxx.py即可。
+
+#! python2
+当python脚本需要python3运行时，只需在脚本前加上，，然后运行py xxx.py即可。
+
+#! python3
+--------------------------------------------
+
+py -2 hello.py
+
+
+类似的，如果你想用Python3运行它，就这样
+
+
+py -3 hello.py
+
+-------------------------------------------
+使用pip当Python2和Python3同时存在于windows上时，它们对应的pip都叫pip.exe，所以不能够直接使用 pip install 命令来安装软件包。而是要使用启动器py.exe来指定pip的版本。命令如下：
+
+py -2 -m pip install XXXX
+
+-2 还是表示使用 Python2，-m pip 表示运行 pip 模块，也就是运行pip命令了。
+
+如果是为Python3安装软件，那么命令类似的变成
+
+py -3 -m pip install XXXX
+
+$pip2 install xxx  
+$pip2 unstall xxx  

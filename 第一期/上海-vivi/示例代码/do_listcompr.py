@@ -1,0 +1,1 @@
+# -.- coding:utf-8 -.-# __author__= 'vivi'#练习，修改列表生成式，使其list中的元素都变成小写#方法一：L1 = ['Hello', 'World', 18, 'Apple', None]L2 = []for x in L1:    if not isinstance(x, str):        continue    L2.append(x.lower())print(L2)#方法二：L1 = ['Hello', 'World', 18, 'Apple', None]print([x.lower() for x in L1 if isinstance(x, str)])
