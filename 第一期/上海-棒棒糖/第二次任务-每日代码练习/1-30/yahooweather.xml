@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rss xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" version="2.0">  
+  <channel> 
+    <title>Yahoo! Weather - Beijing, CN</title>  
+    <link>http://us.rd.yahoo.com/dailynews/rss/weather/Beijing__CN/*http://weather.yahoo.com/forecast/CHXX0008_c.html</link>  
+    <description>Yahoo! Weather for Beijing, CN</description>  
+    <language>en-us</language>  
+    <lastBuildDate>Mon, 06 Oct 2014 5:00 pm CST</lastBuildDate>  
+    <ttl>60</ttl>  
+    <yweather:location city="Beijing" region="" country="China"/>  
+    <yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>  
+    <yweather:wind chill="20" direction="200" speed="6.44"/>  
+    <yweather:atmosphere humidity="34" visibility="" pressure="1020.9" rising="0"/>  
+    <yweather:astronomy sunrise="6:14 am" sunset="5:49 pm"/>  
+    <image> 
+      <title>Yahoo! Weather</title>  
+      <width>142</width>  
+      <height>18</height>  
+      <link>http://weather.yahoo.com</link>  
+      <url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url> 
+    </image>  
+    <item> 
+      <title>Conditions for Beijing, CN at 5:00 pm CST</title>  
+      <geo:lat>39.91</geo:lat>  
+      <geo:long>116.39</geo:long>  
+      <link>http://us.rd.yahoo.com/dailynews/rss/weather/Beijing__CN/*http://weather.yahoo.com/forecast/CHXX0008_c.html</link>  
+      <pubDate>Mon, 06 Oct 2014 5:00 pm CST</pubDate>  
+      <yweather:condition text="Sunny" code="32" temp="20" date="Mon, 06 Oct 2014 5:00 pm CST"/>  
+      <description> <![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/32.gif"/><br /> <b>Current Conditions:</b><br /> Sunny, 20 C<BR /> <BR /><b>Forecast:</b><BR /> Mon - Clear. High: 19 Low: 9<br /> Tue - Sunny. High: 22 Low: 10<br /> Wed - Sunny. High: 24 Low: 12<br /> Thu - Sunny. High: 25 Low: 13<br /> Fri - Partly Cloudy. High: 24 Low: 13<br /> <br /> <a href="http://us.rd.yahoo.com/dailynews/rss/weather/Beijing__CN/*http://weather.yahoo.com/forecast/CHXX0008_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/> (provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]> </description>  
+      <yweather:forecast day="Mon" date="6 Oct 2014" low="9" high="19" text="Clear" code="31"/>  
+      <yweather:forecast day="Tue" date="7 Oct 2014" low="10" high="22" text="Sunny" code="32"/>  
+      <yweather:forecast day="Wed" date="8 Oct 2014" low="12" high="24" text="Sunny" code="32"/>  
+      <yweather:forecast day="Thu" date="9 Oct 2014" low="13" high="25" text="Sunny" code="32"/>  
+      <yweather:forecast day="Fri" date="10 Oct 2014" low="13" high="24" text="Partly Cloudy" code="30"/>  
+      <guid isPermaLink="false">CHXX0008_2014_10_10_7_00_CST</guid> 
+    </item> 
+  </channel> 
+</rss>
+<!--
+ fan1587.sports.bf1.yahoo.com Mon Oct  6 03:36:02 PDT 2014 
+-->
