@@ -82,6 +82,7 @@ if __name__ == "__main__":
         print(child.tag, " ", child.text)
 
     print("~" * 20)
+
     # 下面演示删除所有的neighbor节点
     # 当然你自己可以加判断条件删除指定的节点，自行尝试吧
 
