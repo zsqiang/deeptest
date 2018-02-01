@@ -86,7 +86,7 @@ if __name__ == "__main__":
     # 下面演示删除所有的neighbor节点
     # 当然你自己可以加判断条件删除指定的节点，自行尝试吧
 
-    for child in root.findall("neighbor"):
+    for child in root.findall(".//country[@name='Panama']"):
         root.remove(child)
 
     # 保存上述操作后的xml至xml_write_data.xml
