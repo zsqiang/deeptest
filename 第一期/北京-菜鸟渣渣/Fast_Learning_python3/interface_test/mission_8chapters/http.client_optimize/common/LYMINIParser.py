@@ -1,6 +1,5 @@
 #-*- coding:utf-8 -*-
 
-__author__ = "苦叶子"
 
 from configparser import ConfigParser
 import os

@@ -53,7 +53,7 @@ if __name__ != '__main__':
     document = """
        公众号: 开源优测
        基本信息:
-           创建人: 苦叶子
+           创建人: 叶子
            id: DeepTest
        """
 

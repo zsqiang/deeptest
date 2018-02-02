@@ -5,7 +5,6 @@ import os
 import time
 from pathlib import Path
 
-__author__ = "苦叶子"
 print(time.localtime())
 LOG_PATH = os.path.normpath(os.path.dirname(__file__) + time.strftime("\\logs\\%Y-%m-%d.log", time.localtime()))
 print(time.strftime("\\logs\\%Y-%m-%d.log", time.localtime()))

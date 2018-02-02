@@ -1,7 +1,6 @@
 #-*- coding:utf-8 -*-
 
 
-__author__ = "苦叶子"
 
 import os
 from openpyxl import Workbook, load_workbook
