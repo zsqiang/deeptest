@@ -39,8 +39,8 @@ class Mypaser(HTMLParser):
 
 if __name__=="__main__":
     r=request.urlopen("https://www.cnblogs.com/flowingwind/p/8379881.html")
-    html_data=r.read().decode(encoding='utf-8')
-
+    html_data=r.read().decode('utf-8') #有时这里会出现decodeerrror,根据情况修改字符参数或者加个ignore参数
+                                                #因为默认第二个参数为strict--有时会造成错误
     mypaser1=Mypaser()
     mypaser1.feed(html_data)
     result=mypaser1.get_data()
