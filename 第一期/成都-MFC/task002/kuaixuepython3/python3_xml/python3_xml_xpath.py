@@ -13,7 +13,7 @@ try:
     # 若想加快速度，可以使用C语言编译的API xml.etree.cElementTree
     import xml.etree.cElementTree as ET
 except ImportError:
-    import xml.etree.ElementInclude as ET
+    import xml.etree.ElementTree as ET
 
 print("Element Tree XPath特性支持示例")
 
@@ -65,4 +65,5 @@ print("通过子节点的文本内容来选择节点:")
 gdppc = root.findall(".//*[gdppc='59900']")
 for gd in gdppc:
     print(gd.tag, " -> ", gd.attrib["name"])  # 然后获取该节点的name
+
 
