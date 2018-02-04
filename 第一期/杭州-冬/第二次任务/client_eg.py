@@ -1,11 +1,12 @@
 #--coding:utf-8--
 #本折关于py用来处理http的三大库中的client
-
+"""
 #client主要用HTTPConnection HTTPResponse来处理http相关交互
 
-#初始化建立一个目标http连接
+#初始化建立一个目标http连接,返回HTTPConnection实例对象
 HTTPConnection(host,port=None,[timeout,]source_address=None)
 
+#下面的HTTPConnection HTTPResponse均指一个相应的实例对象
 #连接到初始化时指定服务器.若客户端还没有连接到服务器,默认在发出请求时间自动调用该方法
 HTTPConnection.connect()
 
@@ -16,7 +17,7 @@ HTTPConnection.connect()
 
 #将数据发送到服务器,在头信息之后--endheader() 获取响应前--getresponse()
 HTTPConnection.send(data)
-#获取请求的响应--一个HTTPResponse对象 可迭代对象
+#获取请求的响应--返回一个HTTPResponse对象 可迭代对象
 HTTPConnection.getresponse()
 
 #设置调试级别 有问题方便定位 默认为0 即是不输出调试信息
@@ -37,7 +38,7 @@ HTTPResponse.reason
 
 #将响应主体下一个字节读取到缓冲区XX 返回读取的字节数
 HTTPResponse.readinto(XX)
-
+"""
 #
 #import http.client
 from http import client
@@ -47,6 +48,9 @@ if __name__=="__main__":
     conne=client.HTTPSConnection('www.baidu.com')
 
     #get请求获取目标资源
-    conne.request('get','/')
+    conne.request('GET','http://tieba.baidu.com')
     r0=conne.getresponse()
-    print(r0.status)
+    print(r0.status,r0.reason)
+    for i,j in r0.getheaders():
+        print(i,':',j)
+    
