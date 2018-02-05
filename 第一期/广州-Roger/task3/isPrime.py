@@ -19,6 +19,7 @@ class PrimeNum():
 		for i in range(2,num1+1):
 			if self.num % i ==0:
 				print("{0}不是质数".format(self.num))
+				print("{0} = {1} * {2}".format(self.num,i,self.num/i))
 				break
 			else:
 				pass
