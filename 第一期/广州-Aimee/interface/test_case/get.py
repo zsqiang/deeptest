@@ -12,13 +12,12 @@ url = ''.join([host,endpoint])
 params = {'show_env' :1}
 
 #给服务器发送请求
-r = requests.get(url) #无参数
-# r = requests.get(url,params=params)  #有参数
-# r = requests.get(url,params=params,headers =None)  #有headers
-print(type(r))
-# print(r.url) #获取url
-# print(r.status_code,r.reason,r.headers) #获取状态码
-print(r.headers) #获取状态码
+# r = requests.get(url) #无参数
+r = requests.get(url,params=params)  #有参数
+r = requests.get(url,params=params,headers =None)  #有headers
+
+print(r.url) #获取url
+print(r.status_code,r.reason,r.headers) #获取状态码
 
 print(r.text) #文本形式 Unicode文本形式
 # print(type(r.text))
