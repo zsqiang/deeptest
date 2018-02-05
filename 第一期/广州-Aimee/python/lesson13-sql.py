@@ -11,18 +11,17 @@ conn = pymysql.connect(
     user='root',
     passwd='leihou888;',
     db='oola-uat',
-    charset='utf8',  #指定编码方式,
-    cursorclass = pymysql.cursors.DictCursor
+    charset='utf8'  #指定编码方式
 )
 # 默认返回的是元祖类型
 # 获取查询数据：cursor.fetchone()获取剩余结果的第一行数据，
 # cursor.fetchmany(3)获取剩余结果的前3行数据，
 # cursor.fetchall()获取剩余结果的所有数据
-cur  =conn.cursor()
-sql = 'SELECT username FROM star_manager '
-cur.execute(sql)
-r = cur.fetchmany(2)
-print (r)
+# cur  =conn.cursor()
+# sql = 'SELECT username FROM star_manager '
+# cur.execute(sql)
+# r = cur.fetchmany(2)
+# print (r)
 
 
 try:
