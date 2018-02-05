@@ -1,0 +1,8 @@
+{
+  "test_pytest.py::test_chckip": true, 
+  "test_pytest.py::test_chckip[127.0..1-2]": true, 
+  "test_pytest.py::test_chckip[127.0..1]": true, 
+  "test_pytest.py::test_chckip[127.1.1.*-2]": true, 
+  "test_pytest.py::test_chckip[127.1.1.*]": true, 
+  "test_pytest.py::test_fun1": true
+}
