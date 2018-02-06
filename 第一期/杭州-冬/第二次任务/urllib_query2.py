@@ -1,5 +1,6 @@
 #--coding:utf-8--
 #本折继续用urllib请求电话归属查询接口,换成把参数data拼接在url后面,用get方法请求接口
+#接口地址 http://api.jisuapi.com/shouji/query
 
 import urllib.request
 import json
@@ -12,7 +13,7 @@ if __name__=="__main__":
     #参数编码符合http规范
     url_data=urllib.parse.urlencode(dict_para)
 
-    #把参数拼接在url后面
+    #把参数拼接在url后面,注意格式 用？分割
     url="http://api.jisuapi.com/shouji/query"+"?"+url_data
 
     #获取请求响应
