@@ -1,3 +1,4 @@
+
 #logging模块用于打印日志，logging.basicConfig()函数实现打印日志的基础配置
 import logging; logging.basicConfig(level=logging.INFO)
 import asyncio,os,json,time
@@ -16,3 +17,10 @@ def init(loop):
 loop=asyncio.get_event_loop()
 loop.run_until_complete(init(loop))
 loop.run_forever()
+
+
+
+
+
+
+
