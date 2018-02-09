@@ -1,5 +1,5 @@
 #--coding:utf-8--
-#本折关于用openpyxl的一些简述,详情见官方文档
+#本折关于用openpyxl简述创建excel并保存,详情见官方文档
 #openpyxl官方解释：Openpyxl is a Python library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files
 
 #首先明确几个概念：workbook--工作簿,可看做我们常说的一个excel文件,一个工作簿里至少有一张工作表
@@ -23,21 +23,51 @@ if __name__=="__main__":
     ws2=wb.create_sheet("mysheet2")
     ws3=wb.create_sheet("mysheet3")
 
+    #给worksheet改个名字
+    ws3.title="my3"
     #把所有的worksheet报上名来
     sheets_name=wb.get_sheet_names() #list类型
     print(sheets_name)
     
+    #返回worksheet
+    ss=wb["mysheet2"]
     # When a worksheet is created in memory, it contains no cells. They are created when firs accessed
     #在你的workbook对象保存到磁盘成为文件前 worksheet中是没有cell的,不过cell会在你首次访问它时自动生成
 
-    #so 3种穿建cell的方法
-    a1=ws["A1"]     #默认值为None
+    #so 3种访问cell的方法
+        #worksheet可视为dict cell为其中一个key-value对
+    ws["A1"]     #默认值为None,在A1返回一个 cell,不存在则穿建一个
     ws["A2"]=12     #赋值的同时穿建cell
     a3=ws.cell(row=3,column=1,value=13)
 
     #输出3个单元格的值
-    #print(ws["A1"].value,ws["A2"].value,ws["A3"].value)
+    print(ws["A1"].value,ws["A2"].value,ws["A3"].value,ws["A4"].value)
     
+    
+    #访问多个cell
+    cell_range=ws['A1:B2']  #generator
+    print("看看访问了那些cell")
+    for cell in cell_range:
+        print(cell)
+
+    print("按行访问并输出")
+    for row in ws.iter_rows(min_row=1,max_row=2,min_col=1,max_col=2):
+        for cell in row:
+            print(cell)
+    print('按列输出并访问')
+    for col in ws.iter_cols(min_col=1,max_col=2,min_row=1,max_row=2):
+        for cell in col:
+            print(cell)
+
+    print(type(ws.iter_rows('A1:A3')))  #generator
+    print(ws["A1"])
+
+    print("给cell赋值","------------")
+    ws["A4"]=4
+    ws["A3"].value=3
+    print(ws["A4"].value,ws["A3"].value)
+    
+    print("给多个cell赋值","------------")
     #对第一行A-c列穿建cell并赋值
     for col in ["A","B","C"]:
         ws["%s1" %col]=11
@@ -49,7 +79,6 @@ if __name__=="__main__":
     for col in ["A","B","C"]:
         ws["%s3" %col]=33
 
-    #print(ws["A1"].value,ws["A2"].value,ws["A3"].value)
     #遍历输出
     for row in range(1,4):
         for col in ("A","B","C"):
@@ -57,4 +86,4 @@ if __name__=="__main__":
         print(end='\n') #换行
 
     #保存到磁盘
-    wb.save('ecxel_data.xlsl')
+    wb.save('excel_data.xlsx')
