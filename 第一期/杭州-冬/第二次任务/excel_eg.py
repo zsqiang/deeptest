@@ -30,15 +30,17 @@ if __name__=="__main__":
     print(sheets_name)
     
     #返回worksheet
+        #一个workbook可视为dict,用作为title的key可访问woksheeet
     ss=wb["mysheet2"]
     # When a worksheet is created in memory, it contains no cells. They are created when firs accessed
     #在你的workbook对象保存到磁盘成为文件前 worksheet中是没有cell的,不过cell会在你首次访问它时自动生成
 
     #so 3种访问cell的方法
-        #worksheet可视为dict cell为其中一个key-value对
+        #worksheet可视为dict 坐标和一个cell为key-value对
     ws["A1"]     #默认值为None,在A1返回一个 cell,不存在则穿建一个
-    ws["A2"]=12     #赋值的同时穿建cell
+    ws["A2"]=12     #赋值的同时创建cell
     a3=ws.cell(row=3,column=1,value=13)
+
 
     #输出3个单元格的值
     print(ws["A1"].value,ws["A2"].value,ws["A3"].value,ws["A4"].value)
@@ -47,12 +49,14 @@ if __name__=="__main__":
     #访问多个cell
     cell_range=ws['A1:B2']  #generator
     print("看看访问了那些cell")
-    for cell in cell_range:
-        print(cell)
+    for cells in cell_range: #每个cell为一个tuple,其元素为每行单元格
+        print(cells)
+
+    c4=ws[4]    #tuple 创建/访问一行cell
 
     print("按行访问并输出")
     for row in ws.iter_rows(min_row=1,max_row=2,min_col=1,max_col=2):
-        for cell in row:
+        for cell in row: #和cell_range类似  iter_rows为生成器 每个row为一个tuple 元素为没行单元格 
             print(cell)
     print('按列输出并访问')
     for col in ws.iter_cols(min_col=1,max_col=2,min_row=1,max_row=2):
@@ -60,8 +64,10 @@ if __name__=="__main__":
             print(cell)
 
     print(type(ws.iter_rows('A1:A3')))  #generator
+   
     print(ws["A1"])
-
+    print(ws[3])
+    
     print("给cell赋值","------------")
     ws["A4"]=4
     ws["A3"].value=3
@@ -79,11 +85,16 @@ if __name__=="__main__":
     for col in ["A","B","C"]:
         ws["%s3" %col]=33
 
+    #对第4行赋值 创建第5行的cell并 赋值
+    for cell in c4:
+        cell.value=44
+    print(ws["A4"].value)
+
     #遍历输出
-    for row in range(1,4):
+    for row in range(1,5):
         for col in ("A","B","C"):
             print(ws["%s%d" %(col,row)].value,end=',')
         print(end='\n') #换行
 
     #保存到磁盘
-    wb.save('excel_data.xlsx')
+    #wb.save('excel_data.xlsx')
