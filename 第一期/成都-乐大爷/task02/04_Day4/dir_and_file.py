@@ -89,7 +89,7 @@ def walk_dir(target_dir):
 
 
 # opreate_catelog()
-# opreate_file()
+opreate_file()
 
-target_dir = "G:\\"
-walk_dir(target_dir)
+# target_dir = "G:\\"
+# walk_dir(target_dir)
