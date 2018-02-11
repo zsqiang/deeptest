@@ -50,6 +50,6 @@ if __name__ == "__main__":
             country.remove(url)
             print("delete one url")
 
-
+    tree.write("xml_date.xml", encoding="utf-8")
 
 
