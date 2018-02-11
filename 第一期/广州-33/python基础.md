@@ -8,6 +8,7 @@
 [INI文件读写](#7)<br>
 [目录与文件操作](#8)<br>
 [XML解析处理-Element Tree](#9)<br>
+[SMTP发送邮件](#10)<br>
 [遗留问题](#n)<br>
 
 <h3 id='1'>String</h3>
@@ -60,6 +61,28 @@ ElementTree中每个节点（即Element）具有如下属性：<br>
 注意：Element类型是一种灵活的**容器对象**，用于在内存中存储**结构化数据**。<br>
 <br>
 2. 使用ET.fromstring("xml格式字符串")即可实现对xml格式的字符串进行遍历读取、新增、修改和删除。<br>
+
+<h3 id='10'>SMTP发送邮件</h3>
+1. 使用smtplib进行文本格式、HTML格式和带附件的邮件发送<br>
+ - 导入smtplib模块<br>
+   <font color=grey>import smtplib</font><br>
+ - 关键函数说明<br>
+	1)创建smtp对象<br>
+   <font color=grey>smtp = smtplib.SMTP([host [, port[, localhost]]])</font><br>
+   参数说明：<br>
+   host：smtp服务地址，例如126邮箱的是：smtp.126.com<br>
+   port：smtp服务端口<br>
+   localhost：如果你的smtp服务在本机，则只需指定localhost即可<br>
+<br>
+	2)发送邮件函数<br>
+   <font color=grey>SMTP.sendmail(from\_addr, to\_addrs, msg[, mail\_options, rcpt\_options])</font><br>
+   参数说明：<br>
+   from_addr：邮件发送地址<br>
+   to_addrs：邮件接收地址列表<br>
+   msg：邮件内容<br>
+   mail\_options,rcpt\_options：可选参数<br>
+<br>
+2. 发送内容的构建中，将plain改为html标识邮件内容为html格式，邮件内容采用html语言来格式化
 
 <h3 id='n'>遗留问题</h3>
 1. 利用生成器函数去读大文件，例如10G的文件，你可以利用生成器函数，每次只读100M进行处理，处理完后再读取下一个100M，如此迭代下去<br>
