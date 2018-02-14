@@ -4,10 +4,8 @@ __author__ = 'nancy'
 import configparser
 import os
 
+# ini文件操作类
 class iniconf():
-    '''
-    ini文件操作类
-    '''
     def __init__(self,inipath):
         self.inipath  = inipath
         if os.path.exists(self.inipath):
