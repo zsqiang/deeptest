@@ -69,5 +69,5 @@ if __name__ == "__main__":
     list1.copy()
     list1[0]="哈哈"
     print(list1,list2)
-    
+    dict={}
 
