@@ -85,5 +85,3 @@ if __name__ == "__main__":
     v1=dict_new.get(12,u"我是默认值")
     print(v1)
 
-
-
