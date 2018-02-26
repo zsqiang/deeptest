@@ -119,13 +119,14 @@ if __name__ == "__main__":
     print(set1.intersection(set2))
     print(set1.difference(set2 ))
 
-    var1=input("请输入一个整数: ")
+    var1=int(input("请输入一个整数: "))
     if var1>0 and var1<10:
         print("你输入正确")
     elif var1>=10:
         print("输入对了")
     else:
         print("输入错误")
+        
 
 
-66
+
