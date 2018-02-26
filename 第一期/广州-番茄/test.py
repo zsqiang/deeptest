@@ -69,5 +69,21 @@ if __name__ == "__main__":
     list1.copy()
     list1[0]="哈哈"
     print(list1,list2)
-    dict={}
+    dict1={"name":"lilei","age":"18","kg":120}
+    tup1=[1,2,3,4]
+    print(len(dict1))
+    str_d=str(dict1)
+    print(str_d)
+    print(type(str_d))
+
+    dict_cp=dict1.copy()
+    print(dict_cp)
+    
+    dict_new=dict.fromkeys(tup1,"啦啦")
+    print(dict_new)
+
+    v1=dict_new.get(12,u"我是默认值")
+    print(v1)
+
+
 
