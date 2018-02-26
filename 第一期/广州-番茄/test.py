@@ -51,3 +51,10 @@ if __name__ == "__main__":
 
     for t in tuple2:
         print(t)
+
+    print("list操作")
+    list1=[1,2,3,"test",u"朴慧尚"]
+    print(len(list1))
+    print(list1.append("困难"))
+    print(list1.count("1"))
+    print(list1)
