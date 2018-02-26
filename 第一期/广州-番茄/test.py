@@ -85,3 +85,6 @@ if __name__ == "__main__":
     v1=dict_new.get(12,u"我是默认值")
     print(v1)
 
+    set_result1=dict1.setdefault("name","设置值")
+    set_result12=dict1.setdefault("我是key","我是value")
+    print(dict1)
