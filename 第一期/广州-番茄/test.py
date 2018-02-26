@@ -53,8 +53,21 @@ if __name__ == "__main__":
         print(t)
 
     print("list操作")
-    list1=[1,2,3,"test",u"朴慧尚"]
+    list1=[1,2,3,"test",u"朴慧尚",2]
+    list2=[4,1,6,8]
     print(len(list1))
-    print(list1.append("困难"))
+    list1.append("两三次")        
     print(list1.count("1"))
-    print(list1)
+    list1.extend("10086")
+    print(list1.index(2))
+    list1.insert(-1,"中国")
+    list1.pop()
+    list1.remove(2)
+    list1.reverse()
+    list2.sort()
+    list2.clear()
+    list1.copy()
+    list1[0]="哈哈"
+    print(list1,list2)
+    
+
